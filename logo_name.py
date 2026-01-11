@@ -92,16 +92,12 @@ def main():
         else:
             print("Invalid answer.Please enter the number of options...")
 
-
-# Load your dataset
 data = pd.read_csv('disney_characters.csv')
 
 X = data.drop('Character', axis=1)  # Features (questions)
 y = data['Character']  # Target (character name)
 
-# Create and train the decision tree
 model = DecisionTreeClassifier()
 model.fit(X, y)
 
-# Run the program
 main()
